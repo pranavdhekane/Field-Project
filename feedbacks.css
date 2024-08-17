@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: segoe ui;
+}
+
+body{
+    background: #000;
+    color: white;
+}
+
+/* NAVBAR */
+#navbar {
+    display: flex;
+    justify-content :space-around;
+    align-items: center;
+    height: 15vh;
+    max-width: 100vw;
+    color: white;
+    /* background-color: rgb(27, 46, 167); */
+    background-color: rgba(165, 151, 151, 0.272);
+}
+#navbar h1 {
+    color: rgb(255, 115, 0);
+}
+#navbar ul{
+    display: flex;
+}
+
+#navbar li{
+    list-style: none;
+}
+
+#navbar a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    padding: 0.6rem 1rem;
+    border-radius: 16px;
+    border: 1px solid transparent;
+}
+
+a#current-tab{
+    color : rgb(200, 255, 0);
+    font-weight: 500;
+}
+
+/* #navbar a:hover{
+    color: black;
+    background-color: white;
+} */
+
+/* FORM */
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 10vw;
+}
+
+#form input{
+    display: block;
+    width: 50vw;
+    height: 2rem;
+    border-radius: 10px;
+}
+
+#form input[type=button]{
+    /* color: red; */
+    background-color: blue;
+    height: fit-content;
+    font-size: 1.4rem;
+    margin: 1vw 0;
+}
+
+/* MAIN */
+/* Info */
+#info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 1vw 10vw;
+}
+
+#charts{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+.chart {
+    border: 1px solid white;
+    height: 30vw;
+    width: 45vw;
+    margin: 1vh 5vh 5vh 5vh;
+    border-radius: 20px;
+}
+/* FOOTER */
+#footer{
+    height: 5vh;
+    color: white;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
