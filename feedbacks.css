@@ -22,7 +22,10 @@ body{
     background-color: rgba(165, 151, 151, 0.272);
 }
 #navbar h1 {
-    color: rgb(255, 115, 0);
+    /* color: rgb(255, 115, 0); */
+    background-image: linear-gradient(to bottom right, rgb(255, 140, 0) 30%,  rgb(255, 255, 255), green 90%);
+    background-clip: text;
+    color: transparent;
 }
 #navbar ul{
     display: flex;
@@ -41,6 +44,11 @@ body{
     border: 1px solid transparent;
 }
 
+#navbar a#current-tab{
+    color : rgb(200, 255, 0);
+    font-weight: 500;
+}
+
 #navbar a::before {
     margin-left: auto;
 }
@@ -49,17 +57,12 @@ body{
     content: '';
     width: 0%;
     height: 3px;
-    background: #3682f4;
+    background: #f00505;
     display: block;
     transition: 0.5s;
 }
-#navbar a:hover::after, a:hover::before{
+#navbar a:hover::after{
     width: 100%;
-}
-
-a#current-tab{
-    color : rgb(200, 255, 0);
-    font-weight: 500;
 }
 
 /* #navbar a:hover{

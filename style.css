@@ -28,7 +28,10 @@
     background-color: rgba(165, 151, 151, 0.272);
 }
 #navbar h1 {
-    color: rgb(255, 115, 0);
+    /* color: rgb(255, 115, 0); */
+    background-image: linear-gradient(to bottom right, rgb(255, 140, 0) 30%,  rgb(255, 255, 255), green 90%);
+    background-clip: text;
+    color: transparent;
 }
 #navbar ul{
     display: flex;
@@ -47,6 +50,11 @@
     border: 1px solid transparent;
 }
 
+#navbar a#current-tab{
+    color : rgb(200, 255, 0);
+    font-weight: 500;
+}
+
 #navbar a::before {
     margin-left: auto;
 }
@@ -55,17 +63,13 @@
     content: '';
     width: 0%;
     height: 3px;
-    background: #3682f4;
+    background: #f00505;
     display: block;
     transition: 0.5s;
 }
-#navbar a:hover::after, a:hover::before{
-    width: 100%;
-}
 
-a#current-tab{
-    color : rgb(200, 255, 0);
-    font-weight: 500;
+#navbar a:hover::after{
+    width: 100%;
 }
 
 /* #navbar a:hover{
@@ -150,6 +154,10 @@ a#current-tab{
     align-items: center;
     margin: 5vh;
     border-radius: 10px;
+}
+
+#thanks h1{
+    color: rgb(255, 17, 0);
 }
 
 /* FOOTER */
