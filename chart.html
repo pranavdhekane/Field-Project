@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="path/to/chartjs/dist/chart.umd.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            background-color: #101010;
+            height: 60vh;
+            width: 60vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10vh 10vw;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+
+    <script>
+        var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+        var yValues = [55, 49, 44, 20, 100];
+        var barColors = [
+            "red",
+            "blue",
+            "green",
+            "pink",
+            "orange"
+        ];
+
+        new Chart("myChart", {
+            type: "doughnut",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "abc"
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

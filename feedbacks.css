@@ -39,7 +39,7 @@ body{
 #navbar a{
     text-decoration: none;
     font-size: 1.2rem;
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255);
     border-radius: 16px;
     border: 1px solid transparent;
 }
@@ -65,57 +65,6 @@ body{
     width: 100%;
 }
 
-/* #navbar a:hover{
-    color: black;
-    background-color: white;
-} */
-
-/* FORM */
-#form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin: 10vw;
-}
-
-#form input{
-    display: block;
-    width: 50vw;
-    height: 2rem;
-    border-radius: 10px;
-}
-
-#form input[type=button]{
-    /* color: red; */
-    background-color: blue;
-    height: fit-content;
-    font-size: 1.4rem;
-    margin: 1vw 0;
-}
-
-/* MAIN */
-/* Info */
-#info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    padding: 1vw 10vw;
-}
-
-#charts{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-}
-.chart {
-    border: 1px solid white;
-    height: 30vw;
-    width: 45vw;
-    margin: 1vh 5vh 5vh 5vh;
-    border-radius: 20px;
-}
 /* FOOTER */
 #footer{
     height: 5vh;
@@ -125,3 +74,65 @@ body{
     justify-content: center;
     align-items: center;
 }  
+
+/* MAIN */
+/* main divided into three parts of 90vh height each, first main bar graph , second several doghnuts, third last bar graph
+name : bar1, manyInOne, bar2 */
+/* manyInOne contains two rows, first contains three doughnuts and second one contains one line graph and one doughnut */
+
+/* MAIN */
+#main{
+    padding: 1vh;
+    display: grid;
+    gap: 2vh;
+}
+
+#main > div {
+    border-radius: 10px;
+}
+
+#main #bar1{
+    height: 80vh;
+    background-color: rgb(215, 113, 113);
+}
+
+#main #manyInOne {
+    height: 90vh;
+    background-color: rgb(215, 113, 113);
+}
+
+#main #bar2{
+    height: 90vh;
+    background-color: rgb(215, 113, 113);
+}
+
+/* manyInOne */
+#manyInOne {
+    padding: 2vh;
+}
+
+#row1{
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#row1 > div{
+    height: 90%;
+    width: auto;
+    border: 1px solid black
+}
+
+#row2{
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#row2 > div {
+    height: 90%;
+    width: auto;
+    border: 1px solid black;
+}
