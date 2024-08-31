@@ -3,6 +3,7 @@
     padding: 0;
     scroll-behavior: smooth;
     font-family: segoe ui;
+    overflow-x: hidden;
 }
 
 body{
@@ -82,28 +83,39 @@ name : bar1, manyInOne, bar2 */
 
 /* MAIN */
 #main{
-    padding: 1vh;
     display: grid;
-    gap: 2vh;
+    gap: 5vh;
+    padding: 5vh;
 }
 
 #main > div {
     border-radius: 10px;
 }
 
+#main #msg{
+    height: 30vh;
+    background-color: #303030;
+}
+
 #main #bar1{
     height: 80vh;
-    background-color: rgb(215, 113, 113);
+    background-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #main #manyInOne {
     height: 90vh;
-    background-color: rgb(215, 113, 113);
+    background-color: #303030;
 }
 
 #main #bar2{
-    height: 90vh;
-    background-color: rgb(215, 113, 113);
+    height: 80vh;
+    background-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* manyInOne */
@@ -114,20 +126,21 @@ name : bar1, manyInOne, bar2 */
 #row1{
     height: 40%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 #row1 > div{
     height: 90%;
-    width: auto;
+    padding: 1vh;
+    width: fit-content;
     border: 1px solid black
 }
 
 #row2{
     height: 60%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -136,3 +149,12 @@ name : bar1, manyInOne, bar2 */
     width: auto;
     border: 1px solid black;
 }
+
+#row2 div:nth-child(1){
+    width: 65%;
+}
+
+#row2 div:nth-child(2){
+    width: 30%;
+}
+
