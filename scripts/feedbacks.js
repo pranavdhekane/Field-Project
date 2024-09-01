@@ -6,6 +6,31 @@ const doughnutTwo = document.getElementById('doughnutTwo').getContext('2d');
 const doughnutThree = document.getElementById('doughnutThree').getContext('2d');
 const doughnutFour = document.getElementById('doughnutFour').getContext('2d');
 
+let bar1Graph = [5, 12, 4, 3];
+let bar2Graph = [6, 16, 2, 0];
+let lineGraph = [12, 10, 1, 1];
+let doughnutOneGraph = [3, 6, 15];
+let doughnutTwoGraph = [8, 11, 3, 1];
+let doughnutThreeGraph = [14, 8, 1, 1];
+let doughnutFourGraph = [10, 13, 1, 0];
+
+let barColor =  [ 
+    'rgba(255, 99, 132, 0.2)',
+    'rgba(54, 162, 235, 0.2)',
+    'rgba(255, 206, 86, 0.2)',
+    'rgba(75, 192, 192, 0.2)',
+];
+
+let barBorder = [ 
+    'rgba(255, 99, 132, 1)',
+    'rgba(54, 162, 235, 1)',
+    'rgba(255, 206, 86, 1)',
+    'rgba(75, 192, 192, 1)',
+];
+
+// barColor = ['rgb(255, 30, 50, 0.7)', 'rgb(19, 255, 0, 0.7)', 'rgb(0, 114, 255, 0.7)', 'rgb(255, 255, 0, 0.7)'];
+// barColor = ['#101010', '#202020', '#303030', '#404040'];
+// barBorder = ['white'];
 
 // BAR ONE
 new Chart(barOne, {
@@ -14,19 +39,9 @@ new Chart(barOne, {
         labels: ['Morning', 'Midday', 'Evening', 'Night'],
         datasets: [{
             // label: 'Prime Timinigs', 
-            data: [5, 12, 4, 3], 
-            backgroundColor: [ 
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-            ],
-            borderColor: [ 
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-            ],
+            data: bar1Graph, 
+            backgroundColor: barColor,
+            borderColor: barBorder,
             borderWidth: 1 
         }]
     },
@@ -52,19 +67,9 @@ new Chart(barTwo, {
         labels: ['Very Affordable', 'Affordable', 'Expensive', 'Very Expensive'],
         datasets: [{
             label : 'cost',
-            data: [6, 16, 2, 0], 
-            backgroundColor: [ 
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-            ],
-            borderColor: [ 
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-            ],
+            data: bar2Graph, 
+            backgroundColor: barColor,
+            borderColor: barBorder,
             borderWidth: 1 
         }]
     },
@@ -92,19 +97,9 @@ new Chart(line, {
         labels: ['0-15 min', '15-30 min', '30-60 min', 'more than hour'],
         datasets: [{
             label: 'Time that you travel using metro',
-            data: [12, 10, 1, 1], 
-            backgroundColor: [ 
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-            ],
-            borderColor: [ 
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-            ],
+            data: lineGraph, 
+            backgroundColor: barColor,
+            borderColor: barBorder,
             borderWidth: 1 
         }]
     },
@@ -112,7 +107,7 @@ new Chart(line, {
         maintainAspectRatio: false,
         scales: {
             y: {
-                beginAtZero: true 
+                beginAtZero: true
             }
         }, 
         plugins : {
@@ -131,17 +126,9 @@ new Chart(doughnutOne, {
         labels: ['Daily', 'Weekly', 'Rarely'],
         datasets: [{
             label: 'How often use metro',
-            data: [3, 6, 15], 
-            backgroundColor: [ 
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-            ],
-            borderColor: [ 
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-            ],
+            data: doughnutOneGraph, 
+            backgroundColor: barColor,
+            borderColor: barBorder,
             borderWidth: 1 
         }]
     },
@@ -162,19 +149,9 @@ new Chart(doughnutTwo, {
         labels: ['Never', 'Rarely', 'Sometimes', 'Often'],
         datasets: [{
             label: 'Delays and Disruptions',
-            data: [8, 11, 3, 1], 
-            backgroundColor: [ 
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-            ],
-            borderColor: [ 
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-            ],
+            data: doughnutTwoGraph, 
+            backgroundColor: barColor,
+            borderColor: barBorder,
             borderWidth: 1 
         }]
     },
@@ -196,19 +173,9 @@ new Chart(doughnutThree, {
         labels: ['Very Sattisfied', 'Sattisfied', 'Neutral', 'Dissatisfied'],
         datasets: [{
             label: 'Cleanliness',
-            data: [14, 8, 1, 1], 
-            backgroundColor: [ 
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-            ],
-            borderColor: [ 
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-            ],
+            data: doughnutThreeGraph, 
+            backgroundColor: barColor,
+            borderColor: barBorder,
             borderWidth: 1 
         }]
     },
@@ -230,20 +197,10 @@ new Chart(doughnutFour, {
         labels: ['Excellent', 'Good', 'Poor', 'Fair'],
         datasets: [{
             label: 'People With Disability',
-            data: [10, 13, 1, 0], 
-            backgroundColor: [ 
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-            ],
-            borderColor: [ // 
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-            ],
-            borderWidth: 1 // Border width of the bars
+            data: doughnutFourGraph, 
+            backgroundColor: barColor,
+            borderColor: barBorder,
+            borderWidth: 1 
         }]
     },
     options: {

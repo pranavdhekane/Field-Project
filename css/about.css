@@ -13,7 +13,7 @@
 }
 #about::before {
     content: "";
-    background: url(about.jpg) no-repeat center center/cover;
+    background: url(../assets/about.jpg) no-repeat center center/cover;
     position: absolute;
     top: 0vh;
     left: 0px;

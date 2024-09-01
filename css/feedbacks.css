@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    font-family: segoe ui;
-    overflow-x: hidden;
+    font-family: segoe ui;    
 }
 
 body{
@@ -11,10 +10,10 @@ body{
     color: white;
 }
 
-/* MAIN */
-/* main divided into three parts of 90vh height each, first main bar graph , second several doghnuts, third last bar graph
-name : bar1, manyInOne, bar2 */
-/* manyInOne contains two rows, first contains three doughnuts and second one contains one line graph and one doughnut */
+canvas{
+    overflow-x: hidden;
+}
+
 
 /* MAIN */
 #main{
@@ -29,8 +28,28 @@ name : bar1, manyInOne, bar2 */
 }
 
 #main #msg{
-    height: 30vh;
-    background-color: #303030;
+    /* background-color: #303030; */
+    font-size: 1.75rem;
+    padding: 5vh 1vh;
+}
+
+#main #msg a{
+    border: 1px solid;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 0.5rem 0.7rem;
+}
+
+#main #msg a:hover{
+    border:1px solid black;
+    box-shadow: 0px 0px 10px whitesmoke;
+}
+
+#main #msg a:active{
+    border:1px solid white;
+    box-shadow: 0px 0px 0px rgb(0, 0, 0);
 }
 
 #main #big1{
@@ -55,11 +74,14 @@ name : bar1, manyInOne, bar2 */
     flex-direction: column;
     gap: 2vh;
     padding: 1vh;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 
 .chart > div {
     overflow: hidden;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
 }
 /* manyInOne */
 #manyInOne {
@@ -73,7 +95,7 @@ name : bar1, manyInOne, bar2 */
 }
 
 #row1{
-    height: 40%;
+    height: 50%;
     gap: 1vw;
 }
 
@@ -81,16 +103,15 @@ name : bar1, manyInOne, bar2 */
     height: 90%;
     padding: 1vh;
     width: 100%;
-    border: 1px solid black;
 }
 
 #row2{
-    height: 60%;
+    height: 50%;
     gap: 1vw;
 }
 
 #row2 > div {
     height: 90%;
     width: 100%;
-    border: 1px solid black;
 }
+

@@ -25,7 +25,7 @@
 
 #main::before {
     content: "";
-    background: url(MAIN_BG.jpg) no-repeat center center/cover;
+    background: url(../assets/MAIN_BG.jpg) no-repeat center center/cover;
     position: absolute;
     top: 0vh;
     left: 0px;
