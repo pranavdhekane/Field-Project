@@ -3,17 +3,13 @@
     padding: 0;
     scroll-behavior: smooth;
     font-family: segoe ui;    
+    overflow-x: hidden;
 }
 
 body{
     background: #000;
     color: white;
 }
-
-canvas{
-    overflow-x: hidden;
-}
-
 
 /* MAIN */
 #main{
@@ -34,6 +30,7 @@ canvas{
 }
 
 #main #msg a{
+    display: table;
     border: 1px solid;
     color: white;
     text-decoration: none;
