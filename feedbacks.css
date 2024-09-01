@@ -90,6 +90,7 @@ name : bar1, manyInOne, bar2 */
 
 #main > div {
     border-radius: 10px;
+    padding: 5vh;
 }
 
 #main #msg{
@@ -97,64 +98,64 @@ name : bar1, manyInOne, bar2 */
     background-color: #303030;
 }
 
-#main #bar1{
-    height: 80vh;
+#main #big1{
+    height: 70vh;
     background-color: #303030;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #main #manyInOne {
-    height: 90vh;
+    height: 120vh;
     background-color: #303030;
 }
 
-#main #bar2{
-    height: 80vh;
+#main #big2{
+    height: 60vh;
     background-color: #303030;
+}
+
+.chart{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 1vh;
 }
 
+.chart > div {
+    overflow: hidden;
+    font-size: 1.5rem;
+}
 /* manyInOne */
 #manyInOne {
     padding: 2vh;
 }
 
+#row1, #row2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #row1{
     height: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 1vw;
 }
 
 #row1 > div{
     height: 90%;
     padding: 1vh;
-    width: fit-content;
-    border: 1px solid black
+    width: 100%;
+    border: 1px solid black;
 }
 
 #row2{
     height: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 1vw;
 }
 
 #row2 > div {
     height: 90%;
-    width: auto;
+    width: 100%;
     border: 1px solid black;
 }
-
-#row2 div:nth-child(1){
-    width: 65%;
-}
-
-#row2 div:nth-child(2){
-    width: 30%;
-}
-
