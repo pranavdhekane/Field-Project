@@ -29,8 +29,10 @@ let barBorder = [
 ];
 
 // barColor = ['rgb(255, 30, 50, 0.7)', 'rgb(19, 255, 0, 0.7)', 'rgb(0, 114, 255, 0.7)', 'rgb(255, 255, 0, 0.7)'];
+barColor = ['rgb(255 30, 50, 0.6)', 'rgb(19, 255, 0, 0.6)', 'rgb(0, 114, 255, 0.6)', 'rgb(255, 255, 0, 0.6)'];
+// barBorder = ['red', 'green', 'blue', 'yellow'];
 // barColor = ['#101010', '#202020', '#303030', '#404040'];
-// barBorder = ['white'];
+barBorder = ['#000'];
 
 // BAR ONE
 new Chart(barOne, {
@@ -47,6 +49,7 @@ new Chart(barOne, {
     },
     options: {
         maintainAspectRatio: false,
+        responsive : true,
         scales: {
             y: {
                 beginAtZero: true 
@@ -134,6 +137,7 @@ new Chart(doughnutOne, {
     },
     options: {
         maintainAspectRatio: false,
+        responsive : true,
         scales: {
             y: {
                 display : false
