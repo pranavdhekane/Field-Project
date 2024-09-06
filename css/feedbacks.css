@@ -18,7 +18,7 @@ body{
 /* MAIN */
 #main{
     display: grid;
-    gap: 5vh;
+    /* gap: 5vh; */
     padding: 5vh;
 }
 

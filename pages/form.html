@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metro Transport Services Form</title>
+    <link rel="stylesheet" href="../css/form.css">
+    <script src="../scripts/form.js" defer></script>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>Metro Transport Services</h1>
+        <form id="metroForm">
+            <!-- Email -->
+            <label for="email">Email <span class="star">*</span></label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Name -->
+            <label for="name">Name <span class="star">*</span></label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Metro Usage -->
+            <label>Do you use the metro? <span class="star">*</span></label>
+            <select id="useMetro" name="useMetro" required>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <!-- Frequency of use -->
+            <label>How often do you use the metro? <span class="star">*</span></label>
+            <select id="frequency" name="frequency" required>
+                <option value="Daily">Daily</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Rarely">Rarely</option>
+            </select>
+
+            <!-- Time of use -->
+            <label>What time of day do you use the metro? <span class="star">*</span></label>
+            <select id="timeOfDay" name="timeOfDay" required>
+                <option value="Morning">Morning rush hour</option>
+                <option value="Midday">Midday</option>
+                <option value="Evening">Evening rush hour</option>
+                <option value="Night">Late night</option>
+            </select>
+
+            <!-- Purpose of use -->
+            <label>For what purpose do you usually use the metro? <span class="star">*</span></label>
+            <select id="purpose" name="purpose" required>
+                <option value="College">College</option>
+                <option value="Work">Work</option>
+                <option value="School">School/Classes</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <!-- Route -->
+            <label for="route">Which route do you use? <span class="star">*</span></label>
+            <input type="text" id="route" name="route" required>
+
+            <!-- Journey time -->
+            <label>How long is your average metro journey? <span class="star">*</span></label>
+            <select id="journeyTime" name="journeyTime" required>
+                <option value="Less than 15 mins">Less than 15 minutes</option>
+                <option value="15-30 mins">15-30 minutes</option>
+                <option value="30-60 mins">30-60 minutes</option>
+                <option value="More than an hour">More than an hour</option>
+            </select>
+
+            <!-- Delay experience -->
+            <label>How often do you experience delays or disruption? <span class="star">*</span></label>
+            <select id="delays" name="delays" required>
+                <option value="Never">Never</option>
+                <option value="Rarely">Rarely</option>
+                <option value="Sometimes">Sometimes</option>
+                <option value="Often">Often</option>
+            </select>
+
+            <!-- Cost perception -->
+            <label>Do you think the cost of metro is...? <span class="star">*</span></label>
+            <select id="cost" name="cost" required>
+                <option value="Very affordable">Very affordable</option>
+                <option value="Affordable">Affordable</option>
+                <option value="Expensive">Expensive</option>
+                <option value="Very expensive">Very expensive</option>
+            </select>
+
+            <!-- Cleanliness satisfaction -->
+            <label>How satisfied are you with the cleanliness of stations? <span class="star">*</span></label>
+            <select id="cleanliness" name="cleanliness" required>
+                <option value="Very satisfied">Very satisfied</option>
+                <option value="Satisfied">Satisfied</option>
+                <option value="Neutral">Neutral</option>
+                <option value="Dissatisfied">Dissatisfied</option>
+            </select>
+
+            <!-- Accessibility rating -->
+            <label>How would you rate accessibility for people with disabilities? <span class="star">*</span></label>
+            <select id="accessibility" name="accessibility" required>
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+            </select>
+
+            <!-- Benefits -->
+            <label>What do you think are the primary benefits of using metro trains? <span class="star">*</span></label>
+            <select id="benefits" name="benefits" required>
+                <option value="Road traffic">Less road traffic</option>
+                <option value="Time saving">Less time</option>
+                <option value="Convenience">Convenience</option>
+                <option value="Cost effective">Cost effectiveness</option>
+            </select>
+
+            <!-- Metro vs other transport -->
+            <label for="comparison">Metro vs other transport: why? <span class="star">*</span></label>
+            <textarea id="comparison" name="comparison" required></textarea>
+
+            <!-- Improvements -->
+            <label>What improvements would you like to see in the metro system? <span class="star">*</span></label>
+            <select id="improvements" name="improvements" required>
+                <option value="Increase frequency">Increase frequency</option>
+                <option value="Better maintenance">Better maintenance</option>
+                <option value="Improve security">Improve security</option>
+                <option value="Expand routes">Expand routes</option>
+            </select>
+
+            <!-- Recommendation -->
+            <label>Would you recommend the metro to others? <span class="star">*</span></label>
+            <select id="recommend" name="recommend" required>
+                <option value="Definitely">Definitely</option>
+                <option value="Probably">Probably</option>
+                <option value="Not sure">Not sure</option>
+                <option value="Probably not">Probably not</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+</body>
+
+</html>
