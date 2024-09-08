@@ -26,6 +26,7 @@ label{
 .form-container {
     max-width: 600px;
     margin: auto;
+    margin-top: 1rem;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -61,4 +62,17 @@ input[type="submit"]:hover {
 
 .star {
     color: rgb(239, 6, 6);
+}
+
+#back-btn{
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
