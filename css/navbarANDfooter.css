@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: segoe ui;
+    box-sizing: border-box;
+}
 /* NAVBAR */
 #navbar {
     display: flex;

@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('metroForm');
   const submitButton = form.querySelector('input[type="submit"]');
-
+  const body = document.querySelector('body');
   // Create a spinner element
   const spinner = document.createElement('div');
   spinner.id = 'spinner';
   spinner.style.display = 'none'; // Hide initially
-  spinner.innerHTML = '<div class="loader">Loading...</div>'; // Customize as needed
+  spinner.innerHTML = '<div class="loader"></div>'; // Customize as needed
   document.body.appendChild(spinner);
 
   form.addEventListener('submit', function (event) {
@@ -15,9 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Disable the submit button to prevent resubmitting
     submitButton.disabled = true;
 
-    // Show the spinner
+    body.style.opacity = '0.5';
     spinner.style.display = 'block';
-    // Collect all data from the form fields
 
     const formData = {
       email: document.getElementById('email').value,
@@ -54,9 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(result => {
         spinner.style.display = 'none';
         submitButton.disabled = false;
+        body.style.opacity = '1';
         form.reset();
       })
       .catch(error => {
+        body.style.opacity = '1';
         spinner.style.display = 'none';
         submitButton.disabled = false;
         alert('There was an error submitting the form.');
