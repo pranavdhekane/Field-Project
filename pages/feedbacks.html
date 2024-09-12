@@ -7,6 +7,9 @@
     <title>Feedbacks</title>
     <link rel="stylesheet" href="../css/navbarANDfooter.css">
     <link rel="stylesheet" href="../css/feedbacks.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../scripts/feedbacks.js" defer></script>
 </head>
@@ -24,49 +27,63 @@
     </div>
 
     <div id="main">
-        <div id="msg">
-            <p>
-                The Data Collected From the form that is circulated is shown below using graphs from charts.js library. 
-            </p>
-            <p>
-                Also we are trying to make a form that can take responses from users and update following charts directly...
-            </p>
-            <a href="form.html">Fill The Form</a>
-        </div>
-        <div id="big1" class="chart">
-            <div>Prime Timinigs During Day</div>
-            <canvas id="barOne"></canvas>            
+        <div id="imgMsgContainer">
+            <div id="img">
+                
+            </div>
+            <div id="msg">
+                <p>
+                    The Data Collected From the form that is circulated is shown below using graphs from charts.js
+                    library.
+                </p>
+                <p>
+                    Also u can fill the form.. and the charts will dynamicaly change their values
+                </p>
+                <a href="form.html">Fill The Form</a>
+            </div>
         </div>
         
-        <div id="manyInOne" >
+        <div id="big1" class="chart">
+            <button class="expand" onclick="expand(this)"><i class="fa-solid fa-expand"></i></button>
+            <div>Prime Timinigs During Day</div>
+            <canvas id="barOne"></canvas>
+        </div>
+        
+        <div id="manyInOne">
             <div id="row1">
                 <div class="chart">
-                    <div>Title</div>
-                    <canvas id="doughnutOne"></canvas>
+                <button class="expand" onclick="expand(this)"><i class="fa-solid fa-expand"></i></button>
+                <div>Metro Usuage</div>
+                <canvas id="doughnutOne"></canvas>
                 </div>
                 <div class="chart">
-                    <div>Title</div>
+                    <button class="expand" onclick="expand(this)"><i class="fa-solid fa-expand"></i></button>
+                    <div>Delays And Disruptions</div>
                     <canvas id="doughnutTwo"></canvas>
                 </div>
                 <div class="chart">
-                    <div>Title</div>
+                    <button class="expand" onclick="expand(this)"><i class="fa-solid fa-expand"></i></button>
+                    <div>Cleanliness</div>
                     <canvas id="doughnutThree"></canvas>
                 </div>
             </div>
             <div id="row2">
                 <div class="chart">
-                    <div>Title</div>
+                    <button class="expand" onclick="expand(this)"><i class="fa-solid fa-expand"></i></button>
+                    <div>Daily time spend for travelling</div>
                     <canvas id="line"></canvas>
                 </div>
                 <div class="chart">
-                    <div>Title</div>
+                    <button class="expand" onclick="expand(this)"><i class="fa-solid fa-expand"></i></button>
+                    <div>Cost</div>
                     <canvas id="barTwo"></canvas>
                 </div>
             </div>
         </div>
         
         <div id="big2" class="chart">
-            <div>Title</div>
+            <button class="expand" onclick="expand(this)"><i class="fa-solid fa-expand"></i></button>
+            <div>Accessiblity</div>
             <canvas id="doughnutFour"></canvas>
         </div>
     </div>

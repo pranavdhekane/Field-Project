@@ -43,7 +43,7 @@ function createCharts() {
         data: {
             labels: ['Morning', 'Midday', 'Evening', 'Night'],
             datasets: [{
-                label: 'Prime Timinigs', 
+                label: 'Prime Timinigs',
                 data: bar1Graph,
                 backgroundColor: barColor,
                 borderColor: barBorder,
@@ -72,7 +72,7 @@ function createCharts() {
         data: {
             labels: ['Very Affordable', 'Affordable', 'Expensive', 'Very Expensive'],
             datasets: [{
-                label : 'cost',
+                label: 'cost',
                 data: bar2Graph,
                 backgroundColor: barColor,
                 borderColor: barBorder,
@@ -245,3 +245,36 @@ fetch(sheetUrl)
         createCharts();
     })
     .catch(error => console.error('Error fetching data:', error));
+
+// Expand Chart
+function expand(button) {
+    const body = document.querySelector('body');
+    const parent = button.parentElement;
+    const icon = button.querySelector('i');  // Get the <i> tag inside the button
+
+    if (!parent.classList.contains('expanded')) {
+        // Add blur background
+        const blurDiv = document.createElement('div');
+        blurDiv.classList.add('blur-background');
+        body.appendChild(blurDiv);
+
+        // Expand the chart
+        parent.classList.add('expanded');
+
+        // Update the icon to resize (or collapse)
+        icon.classList.remove('fa-expand');
+        icon.classList.add('fa-compress');
+
+    } else {
+        // Remove blur background
+        document.querySelector('.blur-background').remove();
+
+        // Revert the chart size to original
+        parent.classList.remove('expanded');
+
+        // Update the icon back to expand
+        icon.classList.remove('fa-compress');
+        icon.classList.add('fa-expand');
+    }
+}
+
