@@ -3,40 +3,108 @@
     padding: 0;
     scroll-behavior: smooth;
     font-family: segoe ui;
+    box-sizing: border-box;
 }
 
-/* Profiles */
+#navbar {
+    background-color: black;
+}
+
 #about {
-    height: 85vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1rem;
+    margin: 5vh 20vh;
 }
-#about::before {
-    content: "";
-    background: url(../assets/about.jpg) no-repeat center center/cover;
-    position: absolute;
-    top: 0vh;
-    left: 0px;
-    height: 100vh;
-    width: 100%;
-    z-index: -1;
-    opacity: 1;
+
+.person {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 2fr 6fr;
+    gap: 3rem;
+    padding: 5vh;
+    border-radius: 15px;
+    background-color: #e1eec7;
+    box-shadow: 1px 1px 2px #727866;
 }
-.profile{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5vh;
-    padding: 0 10vh;
-}
-.profile img{
+
+.img {
     height: 40vh;
     width: 40vh;
-    border: 1px solid black;
     border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-.profile .p-name{
+
+.person:nth-child(1) .img {
+    background-image: url(../assets/MAIN_BG.jpg);
+}
+
+.person:nth-child(2) .img {
+    background-image: url(../assets/about.jpg);
+}
+
+.person:nth-child(3) .img {
+    background-image: url(../assets/Charts.png);
+}
+
+.name {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 500;
+    line-height: 5rem;
+}
+
+.p-info {
+    opacity: 0.9;
+    padding-bottom: 2vh;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1vh;
+}
+
+.social-links a {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    color: blue;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links a:hover {
+    background-color: #000;
+    color: red;
+    transition: 0.3s;
+    border: 1px solid red;
+}
+
+@media screen and (max-width : 1000px) {
+    #about {
+        margin: 5vh;
+    }
+
+    .person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width : 450px) {
+    .person {
+        gap: 0;
+        padding: 3vh;
+    }
+
+    .person .img {
+        height: 30vh;
+        width: 30vh;
+        padding: 0;
+    }
 }

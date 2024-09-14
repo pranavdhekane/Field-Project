@@ -43,7 +43,7 @@
     padding: 0 10vw;
 }
 #show p{
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -61,7 +61,7 @@
 .info-img{
     height: 30vw;
     max-width: 40vw;
-    border-radius: 10%;
+    border-radius: 20px;
 }
 
 .info-text{
@@ -78,6 +78,7 @@
 }
 #info2{
     background-color: rgb(228, 238, 244);
+    flex-direction: row-reverse;
 }
 #info3{
     background-color: rgb(255, 255, 255);
@@ -121,5 +122,16 @@
     100% {
         font-size: 4rem;
         transform: rotate(0deg);
+    }
+}
+
+@media screen and (max-width : 1000px) {
+    #info1, #info2, #info3{
+        flex-direction: column;
+    }
+
+    .info-img{
+        height: 40vw;
+        max-width: 70vw;
     }
 }
