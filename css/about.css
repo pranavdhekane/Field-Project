@@ -9,7 +9,7 @@
 #about {
     height: 85vh;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 #about::before {
     content: "";

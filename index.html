@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metro</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbarANDfooter.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/sidebar.js"></script>
 </head>
 
 <body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <ul>
+            <li><a href="#" id="current-tab">Home</a></li>
+            <li><a href="#">Analysis</a></li>
+            <li><a href="pages/feedbacks.html">Feedbacks</a></li>
+            <li><a href="pages/about.html">About</a></li>
+        </ul>
+    </div>
     <div id="navbar">
         <h1>Metro Transport</h1>
         <div></div>
@@ -19,6 +30,7 @@
             <li><a href="pages/feedbacks.html">Feedbacks</a></li>
             <li><a href="pages/about.html">About</a></li>
         </ul>
+        <button class="openbtn" onclick="openNav()">☰</button>
     </div>
 
     <div id="main"> 

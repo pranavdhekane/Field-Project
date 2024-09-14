@@ -77,6 +77,12 @@ input[type="submit"]:hover {
     align-items: center;
 }
 
+#back-btn:hover{
+    color: white;
+    background-color: black;
+    transition: 0.3s;
+}
+
 /* Add this CSS to your form.css file or style section */
 #spinner {
     position: fixed;

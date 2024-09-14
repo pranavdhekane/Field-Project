@@ -138,7 +138,7 @@ function createCharts() {
         },
         options: {
             maintainAspectRatio: false,
-            responsive: true,
+            // responsive: false,
             scales: {
                 y: {
                     display: false
@@ -162,6 +162,7 @@ function createCharts() {
         },
         options: {
             maintainAspectRatio: false,
+            // responsive : false,
             scales: {
                 y: {
                     display: false
@@ -185,6 +186,7 @@ function createCharts() {
         },
         options: {
             maintainAspectRatio: false,
+            // responsive : false,
             scales: {
                 y: {
                     display: false
@@ -208,6 +210,7 @@ function createCharts() {
         },
         options: {
             maintainAspectRatio: false,
+            // responsive : false,
             scales: {
                 y: {
                     display: false

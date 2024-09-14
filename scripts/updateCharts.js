@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('metroForm');
 
     form.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent default form submission
+        // event.preventDefault(); // Prevent default form submission
 
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxT7Yqq1LjoxyN2V6xnmNU4YCs3gdsAhtZwjsg9OkaRRmbqlftVDuA-dE8IayUcY1GW/exec';
 
