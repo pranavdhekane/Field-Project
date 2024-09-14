@@ -37,15 +37,15 @@
 }
 
 .person:nth-child(1) .img {
-    background-image: url(../assets/MAIN_BG.jpg);
+    background-image: url(../assets/pranav.jpeg);
 }
 
 .person:nth-child(2) .img {
-    background-image: url(../assets/about.jpg);
+    background-image: url(../assets/geeta.jpeg);
 }
 
 .person:nth-child(3) .img {
-    background-image: url(../assets/Charts.png);
+    background-image: url(../assets/arthi.jpeg);
 }
 
 .name {
