@@ -88,9 +88,10 @@ body{
 #main #row2{
     height: fit-content;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-flow: dense;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1vw;
 }
 
@@ -177,5 +178,13 @@ body{
 
     #img {
         display: none;
+    }
+}
+@media screen and (max-width : 400px) and (min-width : 0px) {
+    #main > #big1, #row2>div{
+        height: 50vh;
+    }
+    #row1{
+        height: 50vh;
     }
 }
