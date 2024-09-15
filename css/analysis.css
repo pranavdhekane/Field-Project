@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: segoe ui;    
+    box-sizing:border-box;
+}
+
+#navbar{
+    background-color: #000;
+} 
+
+b{
+    font-weight: 600;
+}
+
+/* Charts */
+.chart{
+    margin: 5vh 10vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.chart-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.canvas-container{
+    border: 1px solid black;
+    padding: 4vh 6vh;
+    border-radius: 10px;
+    position: relative;
+}
+
+.chart-info{
+    opacity: 0.9;
+}
+
+
+/* specific canvas styling*/
+#chart1{
+    height: 50vh;
+}
+
+#chart2{
+    height: 35vh;
+}
+
+#chart3{
+    height: 35vh;
+}
+
+/* specific chart styling*/
+.chart-info{
+    display: grid;
+    gap: 0.5rem;
+}
+
+.chart-info li{
+    list-style-type: none;
+}
+
+.chart-info ul p{
+    font-size: 1.25rem;
+}
+
+/* button expand */
+.expand{
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;    
+    cursor: pointer;
+}
+
+/* expand  the chart*/
+.blur-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background: rgba(178, 178, 178, 0.596); */
+    backdrop-filter: blur(5px);
+    z-index: 999; 
+}
+
+.expanded {
+    width: 100vw !important;
+    height: 100vh !important;
+    padding: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.556); */
+    border: none;
+}
+
+@media screen and (max-width : 700px) {
+    .chart {
+        margin: 3vh;
+    }
+}
+
+@media screen and (max-width : 400px){
+    .canvas-container{
+        padding: 5vh 2vh;
+    }
+}
