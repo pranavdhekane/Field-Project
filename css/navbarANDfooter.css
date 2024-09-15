@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: segoe ui;
+    font-family: 'open sans', 'segoe ui'; 
     box-sizing: border-box;
 }
 /* NAVBAR */
@@ -20,6 +20,7 @@
     background-image: linear-gradient(to bottom right, rgb(255, 140, 0) 30%,  rgb(255, 255, 255), green 90%);
     background-clip: text;
     color: transparent;
+    /* font-weight: 600; */
 }
 #navbar ul{
     display: flex;
