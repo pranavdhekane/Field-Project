@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 /* Collapsed Sidebar */
 .sidebar {
     height: 100%;
@@ -8,26 +11,40 @@
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
 }
 
 .sidebar ul {
-    margin-top: 5vh;
+    padding-left: 2rem;
+    margin-top: 15vh;
+}
+
+.sidebar ul li{
+    list-style: none;
 }
 
 .sidebar a {
-    padding: 8px 8px 8px 32px;
+    padding: 0.5rem 0;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: block;
     transition: 0.3s;
+    color: rgba(255, 255, 255, 0.50);
 }
 
 .sidebar a:hover {
-    color: #f1f1f1;
+    color: white;
 }
 
 #current-tab{
+    color: rgb(200, 255, 0);
+}
+
+#side-msg{
+    position: fixed;
+    bottom: 10vh;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding-left: 2rem;
     color: white;
 }
 .sidebar .closebtn {
@@ -40,7 +57,7 @@
 }
 
 .openbtn {
-    font-size: 1rem;
+    font-size: 1.25rem;
     cursor: pointer;
     border: none;
     background-color: none;
