@@ -11,50 +11,84 @@ body{
     color: black;
 }
 
-#navbar {
-    background-color: rgba(0, 0, 0);
-}
 
-/* image and message container */
-#imgMsgContainer {
-    height: fit-content;
-    display: flex;
+/* Show */
+#show {
+    position: relative;
+    display: grid;
+    gap: 10vw;
+    min-height: 50vh;
+    max-height: fit-content;
     justify-content: center;
     align-items: center;
-    flex-direction: row-reverse;
-    padding: 5vh;
+    grid-template-columns: auto auto;
+    padding: 0 10vh;
 }
 
-#imgMsgContainer #img{
-    width: 700px;
-    height: 300px;
+#show #heading {
+    font-size: 3rem;
+    font-weight: 650;
+}
+
+#show #not-heading {
+    font-size: 1rem;
+}
+
+#show #btns {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+#btns a {
+    position: relative;
+    text-decoration: none;
+    --color: #000000;
+    padding: 1vh 3vh;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    color: var(--color);
+    border: 1px solid var(--color);
+    border-radius: 5px;
+}
+
+#btns a::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+#btns a:hover {
+    color: white;
+}
+
+#btns a:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+}
+
+#btns a:hover::before {
+    top: -30px;
+    left: -30px;
+}
+
+#show-img {
+    display: flex;
+    justify-content: center;
+    min-height: 25rem;
+    min-width: 25rem;
+    max-width: 100%;
     background-image: url(../assets/Charts.png);
-    background-size: contain;
     background-repeat: no-repeat;
+    background-size: contain;
     background-position: center;
 }
-#imgMsgContainer #msg{
-    /* background-color: #303030; */
-    font-size: 1.5rem;
-    padding: 5vh 1vh;
-    text-align: left;
-    line-height: 2.5rem;
-}
-
-#imgMsgContainer #msg a{
-    border: 1px solid;
-    color: black;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 5px;
-    padding: 0.5rem 0.7rem;
-    box-shadow: 1px 1px 1px rgb(0, 0, 0);
-}
-
-#imgMsgContainer #msg a:active{
-    box-shadow: 2px 2px 1px rgb(0, 0, 0);
-}
-
 /* main */
 #main {
     padding: 5vh;
@@ -167,9 +201,18 @@ body{
     cursor: pointer;
 }
 
+@media screen and (max-width : 1200px) {
+    #show #heading {
+        font-size: 3.5rem;
+    }
+}
+
 @media screen and (max-width : 1000px) {
-    #imgMsgContainer{
-        flex-direction: column;
+    #show {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 0;
+        padding: 0 7vh;
     }
 }
 @media screen and (max-width : 700px) {
@@ -177,9 +220,16 @@ body{
         padding: 2vh;
     }
 
-    #img {
-        display: none;
+    #show-img {
+        height: 15rem;
+        width: 15rem;
+        /* display: none; */
     }
+
+    #show #heading {
+        font-size: 2.5rem;
+    }
+
 }
 @media screen and (max-width : 400px) and (min-width : 0px) {
     #main > #big1, #row2>div{

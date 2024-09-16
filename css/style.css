@@ -5,10 +5,6 @@
     font-family: 'open sans', 'segoe ui';
 }
 
-#navbar {
-    background-color: black;
-}
-
 /* Show */
 #show {
     position: relative;
@@ -20,8 +16,12 @@
     align-items: center;
     grid-template-columns: auto 30%;
     padding: 0 10vw;
+    color: white;
 }
 
+#show span, #show canvas{
+    position: absolute;
+}
 #show #heading {
     font-size: 4rem;
     font-weight: 650;
@@ -37,16 +37,42 @@
     margin: 1rem 0;
 }
 
-#show #btns a {
-    padding: 1vh 3vh;
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid black;
+#btns a {
+    position: relative;
     text-decoration: none;
+    --color: #fff;
+    padding: 1vh 3vh;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    color: var(--color);
+    border: 1px solid var(--color);
+    border-radius: 5px;
 }
 
-#show #btns a:active {
-    box-shadow: 1px 1px 1px black;
+#btns a::before {
+    position: absolute;
+    content: "";
+    background: var(--color);
+    width: 200px;
+    height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+#btns a:hover {
+    color: black;
+}
+
+#btns a:before {
+    top: 100%;
+    left: 100%;
+    transition: 0.3s all;
+}
+
+#btns a:hover::before {
+    top: -30px;
+    left: -30px;
 }
 
 #show-img {
@@ -59,6 +85,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    /* border: 1px solid white; */
 }
 
 /* Visists info */
@@ -185,11 +212,4 @@
     #show #heading {
         font-size: 2.5rem;
     }
-}
-
-@media screen and (max-width : 400px) {
-    #down-btn a{
-        padding: 1vh;
-    }
-        
 }

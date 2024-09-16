@@ -30,37 +30,37 @@ new Chart(chart1, {
         datasets: [
             {
                 label: 'PCMC',
-                data: pcmc, // First data array
-                backgroundColor: barColor[0], // Color for Line 1
-                borderColor: barBorder[0], // Border color for Line 1
+                data: pcmc, 
+                backgroundColor: barColor[0], 
+                borderColor: barBorder[0], 
                 borderWidth: 1
             },
             {
                 label: 'Vanaz',
-                data: vanaz, // Second data array
-                backgroundColor: barColor[1], // Color for Line 2
-                borderColor: barBorder[1], // Border color for Line 2
+                data: vanaz, 
+                backgroundColor: barColor[1], 
+                borderColor: barBorder[1], 
                 borderWidth: 1
             },
             {
                 label: 'PMC',
-                data: pmc, // Second data array
-                backgroundColor: barColor[2], // Color for Line 2
-                borderColor: barBorder[2], // Border color for Line 2
+                data: pmc, 
+                backgroundColor: barColor[2], 
+                borderColor: barBorder[2], 
                 borderWidth: 1
             },
             {
                 label: 'Pune Railway Station',
-                data: puneRailway, // Second data array
-                backgroundColor: barColor[3], // Color for Line 2
-                borderColor: barBorder[3], // Border color for Line 2
+                data: puneRailway, 
+                backgroundColor: barColor[3], 
+                borderColor: barBorder[3], 
                 borderWidth: 1
             },
             {
                 label: 'Ramwadi',
-                data: ramwadi, // Second data array
-                backgroundColor: barColor[4], // Color for Line 2
-                borderColor: barBorder[4], // Border color for Line 2
+                data: ramwadi, 
+                backgroundColor: barColor[4], 
+                borderColor: barBorder[4], 
                 borderWidth: 1
             }
         ]
@@ -118,17 +118,19 @@ new Chart(chart2, {
         datasets: [
             {
                 label: 'Purple Line (Line 1)',
-                data: totalLine1Ridership, // First data array
-                backgroundColor: barColor[0], // Color for Line 1
-                borderColor: barBorder[0], // Border color for Line 1
-                borderWidth: 1
+                data: totalLine1Ridership, 
+                backgroundColor: barColor[0], 
+                borderColor: barBorder[0], 
+                borderWidth: 1,
+                tension : 0.4
             },
             {
                 label: 'Aqua Line (Line 2)',
-                data: totalLine2Ridership, // Second data array
-                backgroundColor: barColor[1], // Color for Line 2
-                borderColor: barBorder[1], // Border color for Line 2
-                borderWidth: 1
+                data: totalLine2Ridership, 
+                backgroundColor: barColor[1], 
+                borderColor: barBorder[1], 
+                borderWidth: 1,
+                tension : 0.3
             }
         ]
     },
@@ -164,17 +166,19 @@ new Chart(chart3, {
         datasets: [
             {
                 label: 'Purple Line (Line 1)',
-                data: totalLine1Revenue, // First data array
-                backgroundColor: barColor[0], // Color for Line 1
-                borderColor: barBorder[0], // Border color for Line 1
-                borderWidth: 1
+                data: totalLine1Revenue, 
+                backgroundColor: barColor[0], 
+                borderColor: barBorder[0], 
+                borderWidth: 1,
+                tension : 0.4
             },
             {
                 label: 'Aqua Line (Line 2)',
-                data: totalLine2Revenue, // Second data array
-                backgroundColor: barColor[1], // Color for Line 2
-                borderColor: barBorder[1], // Border color for Line 2
-                borderWidth: 1
+                data: totalLine2Revenue, 
+                backgroundColor: barColor[1], 
+                borderColor: barBorder[1], 
+                borderWidth: 1,
+                tension : 0.3
             }
         ]
     },
@@ -224,6 +228,7 @@ function expand(button) {
         // Expand the chart
         parent.classList.add('expanded');
         canvas.style.height = '100%';
+        body.style.overflow = 'hidden';
         
         // Update the icon to resize (or collapse)
         icon.classList.remove('fa-expand');
@@ -235,7 +240,8 @@ function expand(button) {
         
         // Revert the chart size to original
         parent.classList.remove('expanded');
-
+        body.style.overflow = 'scroll';
+        
         const canvasID = canvas.querySelector('canvas').id;
         switch(canvasID){
             case 'chart1' : {

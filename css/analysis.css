@@ -6,11 +6,14 @@
     box-sizing:border-box;
 }
 
-#navbar{
-    background-color: #000;
-} 
-
 b{
+    font-weight: 600;
+}
+
+/* Show */
+#show{
+    margin: 10vh;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -103,7 +106,7 @@ b{
 }
 
 @media screen and (max-width : 700px) {
-    .chart {
+    #show, .chart {
         margin: 3vh;
     }
 }

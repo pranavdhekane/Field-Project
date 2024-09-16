@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-#navbar {
-    background-color: black;
-}
-
 #about {
     display: grid;
     gap: 1rem;
