@@ -81,7 +81,7 @@
     height: 25rem;
     width: 25rem;
     max-width: 100%;
-    background-image: url(../assets/metro.png);
+    background-image: url(../assets/metro-logo.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -197,7 +197,7 @@
     }
 }
 
-@media screen and (max-width : 700px) {
+@media screen and (max-width : 800px) {
     #show {
         display: flex;
         flex-direction: column-reverse;
@@ -211,5 +211,15 @@
 
     #show #heading {
         font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width : 500px){
+    #show{
+        text-align: center;
+        padding: 0 5vw;
+    }
+    #show #btns{
+        justify-content: center;
     }
 }
