@@ -5,18 +5,26 @@
     font-family: 'open sans', 'segoe ui';
 }
 
+#navbar {
+    position: relative;
+    background-color: transparent;
+    z-index: 10;
+}
+
 /* Show */
 #show {
     position: relative;
     display: grid;
     gap: 10vw;
-    min-height: 80vh;
+    min-height: 95vh;
     max-height: fit-content;
     justify-content: center;
     align-items: center;
     grid-template-columns: auto 30%;
     padding: 0 10vw;
     color: white;
+    top: -15vh;
+    padding-top: 15vh;
 }
 
 #show span, #show canvas{
@@ -97,10 +105,10 @@
 }
 
 .info-img {
-    max-height: 50vh;
-    min-height: 30vh;
-    height: auto;
+    /* max-height: 50vh; */
     max-width: 40vw;
+    height: auto;
+    min-height: 30vh;
     border-radius: 20px;
 }
 
@@ -108,7 +116,7 @@
     display: flex;
     /* max-height: 30vw; */
     justify-content: flex-start;
-    font-size: 2.1rem;
+    font-size: 2rem;
     align-items: center;
 }
 
@@ -218,6 +226,7 @@
     #show{
         text-align: center;
         padding: 0 5vw;
+        padding-top: 15vh;
     }
     #show #btns{
         justify-content: center;
