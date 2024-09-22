@@ -13,7 +13,7 @@
 
 /* Show */
 #show {
-    position: relative;
+    /* position: relative; */
     display: grid;
     gap: 10vw;
     min-height: 95vh;
@@ -23,8 +23,9 @@
     grid-template-columns: auto 30%;
     padding: 0 10vw;
     color: white;
-    top: -15vh;
+    /* top: -15vh; */
     padding-top: 15vh;
+    margin-top: -15vh;
 }
 
 #show span, #show canvas{
@@ -97,6 +98,12 @@
 }
 
 /* Visists info */
+#visits{
+    margin: 5vh 0 0 0;
+}
+#visits h1{
+    text-align: center;
+}
 .info {
     display: flex;
     align-items: center;
@@ -116,7 +123,7 @@
     display: flex;
     /* max-height: 30vw; */
     justify-content: flex-start;
-    font-size: 2rem;
+    font-size: 1.5rem;
     align-items: center;
 }
 
@@ -126,7 +133,7 @@
 }
 
 #info2 {
-    background-color: rgb(228, 238, 244);
+    background-color: rgb(234, 190, 248);
     flex-direction: row-reverse;
 }
 
@@ -136,15 +143,12 @@
 
 /* THANKS */
 #thanks {
-    height: 30vh;
+    text-align: center;
     font-size: 2rem;
     background-color: #f8c3c3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5vh;
     border-radius: 10px;
+    margin: 5vh;
+    padding: 5vh;
 }
 
 #thanks div {
@@ -203,6 +207,10 @@
         height: 40vw;
         max-width: 70vw;
     }
+
+    .info-text{
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width : 800px) {
@@ -219,6 +227,10 @@
 
     #show #heading {
         font-size: 2.5rem;
+    }
+
+    .info{
+        padding: 5vh;
     }
 }
 

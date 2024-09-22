@@ -13,7 +13,8 @@ function initializeVantaEffect() {
             color: 0xb129b3,
             color2: 0x3b3b3b,
             size: 0.90,
-            backgroundColor: 0x0
+            backgroundColor: 0x0,
+            // backgroundColor: 0xf
         });
     }
 }

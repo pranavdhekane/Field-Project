@@ -17,10 +17,10 @@
 }
 #navbar h1 {
     /* color: rgb(255, 115, 0); */
-    background-image: linear-gradient(to bottom right, rgb(255, 140, 0) 30%,  rgb(255, 255, 255), green 90%);
+    /* background-image: linear-gradient(to bottom right, rgb(255, 140, 0) 30%,  rgb(255, 255, 255), green 90%);
     background-clip: text;
-    color: transparent;
-    /* font-weight: 600; */
+    color: transparent; */
+    font-weight: 300;
 }
 
 #navbar ul{
@@ -38,11 +38,12 @@
     color: rgba(255, 255, 255);
     border-radius: 16px;
     border: 1px solid transparent;
+    font-weight: 300;
 }
 
 #navbar a#current-tab{
     color : rgb(200, 255, 0);
-    font-weight: 500;
+    /* font-weight: 500; */
 }
 
 #navbar a::before {
