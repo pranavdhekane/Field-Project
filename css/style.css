@@ -16,7 +16,7 @@
     /* position: relative; */
     display: grid;
     gap: 10vw;
-    min-height: 95vh;
+    min-height: 100vh;
     max-height: fit-content;
     justify-content: center;
     align-items: center;
@@ -133,7 +133,7 @@
 }
 
 #info2 {
-    background-color: rgb(234, 190, 248);
+    background-color: rgb(247, 225, 253);
     flex-direction: row-reverse;
 }
 
