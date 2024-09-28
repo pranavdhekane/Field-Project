@@ -238,4 +238,9 @@ body{
     #row1{
         height: 50vh;
     }
+    .expand{
+        font-size: 1rem;
+        top: 0.75rem;
+        right: 0.75rem;    
+    }
 }

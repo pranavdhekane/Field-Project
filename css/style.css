@@ -28,9 +28,11 @@
     margin-top: -15vh;
 }
 
-#show span, #show canvas{
+#show span,
+#show canvas {
     position: absolute;
 }
+
 #show #heading {
     font-size: 4rem;
     font-weight: 650;
@@ -98,12 +100,14 @@
 }
 
 /* Visists info */
-#visits{
+#visits {
     margin: 5vh 0 0 0;
 }
-#visits h1{
+
+#visits h1 {
     text-align: center;
 }
+
 .info {
     display: flex;
     align-items: center;
@@ -141,6 +145,15 @@
     background-color: rgb(255, 255, 255);
 }
 
+/* Info contents animations */
+.info {
+    transform: scale(0.9);
+    transition: transform 1s ease-out;
+}
+
+.info.visible {
+    transform: scale(1);
+}
 /* THANKS */
 #thanks {
     text-align: center;
@@ -208,7 +221,7 @@
         max-width: 70vw;
     }
 
-    .info-text{
+    .info-text {
         font-size: 1rem;
     }
 }
@@ -229,18 +242,19 @@
         font-size: 2.5rem;
     }
 
-    .info{
+    .info {
         padding: 5vh;
     }
 }
 
-@media screen and (max-width : 500px){
-    #show{
+@media screen and (max-width : 500px) {
+    #show {
         text-align: center;
         padding: 0 5vw;
         padding-top: 15vh;
     }
-    #show #btns{
+
+    #show #btns {
         justify-content: center;
     }
 }

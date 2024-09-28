@@ -22,3 +22,19 @@ function initializeVantaEffect() {
 // Initialize the Vanta effect directly
 initializeVantaEffect();
 
+// Animations of info
+{
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing after the animation
+            }
+        });
+    });
+
+    // Observe each .info div
+    document.querySelectorAll('.info').forEach(element => {
+        observer.observe(element);
+    });
+}
