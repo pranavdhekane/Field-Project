@@ -27,14 +27,14 @@ initializeVantaEffect();
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                entry.target.classList.add('pop');
                 observer.unobserve(entry.target); // Stop observing after the animation
             }
         });
     });
 
     // Observe each .info div
-    document.querySelectorAll('.info').forEach(element => {
+    document.querySelectorAll('.info-text').forEach(element => {
         observer.observe(element);
     });
 }

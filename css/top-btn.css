@@ -14,3 +14,11 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width : 450px) {
+    #top-btn{
+        bottom: 4vh;
+        right : 2vh;
+    }
+
+}

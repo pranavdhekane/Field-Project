@@ -146,12 +146,12 @@
 }
 
 /* Info contents animations */
-.info {
-    transform: scale(0.9);
+.info-text {
+    transform: scale(0.95);
     transition: transform 1s ease-out;
 }
 
-.info.visible {
+.pop {
     transform: scale(1);
 }
 /* THANKS */
