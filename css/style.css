@@ -370,9 +370,11 @@
 #thanks {
     text-align: center;
     font-size: 2rem;
-    background-color: #f8c3c3;
-    border-radius: 10px;
-    margin: 5vh;
+    /* background-color: #f8c3c3; */
+    /* border-radius: 10px; */
+    /* margin: 5vh; */
+    background-image: linear-gradient(white 0%,  purple, #121212);
+    color: white;
     padding: 5vh;
 }
 
@@ -381,7 +383,8 @@
 }
 
 #thanks h1 {
-    color: rgb(255, 17, 0);
+    /* color: rgb(255, 0, 0); */
+    color: white;
     animation-name: scale;
     animation-duration: 3s;
     animation-direction: alternate;
